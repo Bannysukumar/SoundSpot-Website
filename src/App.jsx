@@ -1,19 +1,27 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import PrivacyPolicyPage from "./PrivacyPolicyPage";
 
-import appLogo from "../../assets/images/icon.png";
-import shotDiscover from "../../Screenshot_20260304_205235_Expo Go.jpg.jpeg";
-import shotHistory from "../../Screenshot_20260304_205242_Expo Go.jpg.jpeg";
-import shotStats from "../../Screenshot_20260304_205246_Expo Go.jpg.jpeg";
-import shotSettings from "../../Screenshot_20260304_205252_Expo Go.jpg.jpeg";
-import shotPlaylists from "../../Screenshot_20260304_205324_Expo Go.jpg.jpeg";
-
 const screenshots = [
-  { src: shotDiscover, title: "Discover songs instantly" },
-  { src: shotHistory, title: "View your recognition history" },
-  { src: shotStats, title: "Track listening insights" },
-  { src: shotSettings, title: "Control auto recognition" },
-  { src: shotPlaylists, title: "Manage playlists quickly" },
+  {
+    src: "/media/Screenshot_20260304_205235_Expo Go.jpg.jpeg",
+    title: "Discover songs instantly",
+  },
+  {
+    src: "/media/Screenshot_20260304_205242_Expo Go.jpg.jpeg",
+    title: "View your recognition history",
+  },
+  {
+    src: "/media/Screenshot_20260304_205246_Expo Go.jpg.jpeg",
+    title: "Track listening insights",
+  },
+  {
+    src: "/media/Screenshot_20260304_205252_Expo Go.jpg.jpeg",
+    title: "Control auto recognition",
+  },
+  {
+    src: "/media/Screenshot_20260304_205324_Expo Go.jpg.jpeg",
+    title: "Manage playlists quickly",
+  },
 ];
 
 function HomePage() {
@@ -22,7 +30,7 @@ function HomePage() {
       <header className="hero">
         <nav className="nav">
           <div className="brand">
-            <img src={appLogo} alt="SoundSpot logo" />
+            <img src="/media/icon.png" alt="SoundSpot logo" />
             <span>SoundSpot</span>
           </div>
           <div className="nav-links">
