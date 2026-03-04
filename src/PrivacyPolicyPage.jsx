@@ -88,7 +88,9 @@ export default function PrivacyPolicyPage() {
           <p>
             For privacy questions, contact us at:
             <br />
-            <a href="mailto:support@soundspot.app">support@soundspot.app</a>
+            <a href="mailto:bannysukumar@gmail.com">bannysukumar@gmail.com</a>
+            <br />
+            <a href="tel:+916301846681">6301846681</a>
           </p>
         </section>
       </main>

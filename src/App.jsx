@@ -1,6 +1,7 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import PrivacyPolicyPage from "./PrivacyPolicyPage";
 
+import appLogo from "../../assets/images/icon.png";
 import shotDiscover from "../../Screenshot_20260304_205235_Expo Go.jpg.jpeg";
 import shotHistory from "../../Screenshot_20260304_205242_Expo Go.jpg.jpeg";
 import shotStats from "../../Screenshot_20260304_205246_Expo Go.jpg.jpeg";
@@ -20,10 +21,15 @@ function HomePage() {
     <div className="page">
       <header className="hero">
         <nav className="nav">
-          <div className="brand">SoundSpot</div>
+          <div className="brand">
+            <img src={appLogo} alt="SoundSpot logo" />
+            <span>SoundSpot</span>
+          </div>
           <div className="nav-links">
+            <a href="#about">About</a>
             <a href="#features">Features</a>
             <a href="#screenshots">Screenshots</a>
+            <a href="#contact">Contact</a>
             <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
         </nav>
@@ -35,19 +41,28 @@ function HomePage() {
             explore your listening history with a fast, elegant experience.
           </p>
           <div className="cta-row">
-            <a className="btn primary" href="#screenshots">
-              View App Screens
+            <a className="btn primary" href="#contact">
+              Contact Team
             </a>
-            <Link className="btn ghost" to="/privacy-policy">
-              Privacy Policy
-            </Link>
+            <a className="btn ghost" href="#screenshots">
+              View Screenshots
+            </a>
           </div>
         </div>
       </header>
 
       <main>
+        <section id="about" className="section">
+          <h2>About SoundSpot</h2>
+          <p className="section-note section-copy">
+            SoundSpot is a modern music recognition app built for speed and
+            clarity. You can detect songs, review past matches, monitor listening
+            patterns, and manage recognition settings from one clean interface.
+          </p>
+        </section>
+
         <section id="features" className="section">
-          <h2>Why SoundSpot</h2>
+          <h2>Core Features</h2>
           <div className="feature-grid">
             <article>
               <h3>One-tap recognition</h3>
@@ -61,6 +76,23 @@ function HomePage() {
               <h3>Smart auto mode</h3>
               <p>
                 Enable auto recognition with interval and charging controls.
+              </p>
+            </article>
+            <article>
+              <h3>Useful music stats</h3>
+              <p>
+                Follow unique songs, top artists, and listening peaks over time.
+              </p>
+            </article>
+            <article>
+              <h3>Playlist management</h3>
+              <p>Create and organize playlists to keep your tracks sorted.</p>
+            </article>
+            <article>
+              <h3>Dark, focused interface</h3>
+              <p>
+                Enjoy a professional dark theme designed for daily use and
+                readability.
               </p>
             </article>
           </div>
@@ -80,11 +112,33 @@ function HomePage() {
             ))}
           </div>
         </section>
+
+        <section id="contact" className="section">
+          <h2>Contact Details</h2>
+          <p className="section-note section-copy">
+            For support, business inquiries, app listing verification, or privacy
+            queries, please use the details below.
+          </p>
+          <div className="contact-card">
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:bannysukumar@gmail.com">
+                bannysukumar@gmail.com
+              </a>
+            </p>
+            <p>
+              <strong>Phone:</strong> <a href="tel:+916301846681">6301846681</a>
+            </p>
+          </div>
+        </section>
       </main>
 
       <footer className="footer">
         <p>© {new Date().getFullYear()} SoundSpot. All rights reserved.</p>
-        <Link to="/privacy-policy">Read Privacy Policy</Link>
+        <div className="footer-links">
+          <a href="mailto:bannysukumar@gmail.com">bannysukumar@gmail.com</a>
+          <Link to="/privacy-policy">Read Privacy Policy</Link>
+        </div>
       </footer>
     </div>
   );
